@@ -1,4 +1,4 @@
-package Spring_introduction;
+package spring_introduction;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

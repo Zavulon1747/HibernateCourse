@@ -1,4 +1,4 @@
-package Spring_introduction;
+package spring_introduction;
 
 public class MrsAbooba implements TwitchAnimal {
     @Override

@@ -8,9 +8,15 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
     <bean id="myPet"
-          class="Spring_introduction.MrTwitchStreamer">
+          class="spring_introduction.MrsAbooba">
 
     </bean>
+
+    <bean id="myChat"
+          class="spring_introduction.Chat">
+        <constructor-arg ref="myPet"/>
+    </bean>
+
 
 
 </beans>

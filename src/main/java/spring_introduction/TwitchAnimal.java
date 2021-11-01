@@ -1,4 +1,4 @@
-package Spring_introduction;
+package spring_introduction;
 
 public interface TwitchAnimal {
     public void say();
