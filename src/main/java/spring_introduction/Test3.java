@@ -8,7 +8,7 @@ public class Test3 {
 
 //        TwitchAnimal pet = context.getBean("myPet", TwitchAnimal.class);
         Chat chat = context.getBean("myChat", Chat.class);
-        chat.wathcYourStreamer();
+        chat.watchYourStreamer();
 
         context.close();
     }

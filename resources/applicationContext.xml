@@ -14,7 +14,7 @@
 
     <bean id="myChat"
           class="spring_introduction.Chat">
-        <constructor-arg ref="myPet"/>
+    <property name="twitchAnimal" ref="myPet"/>
     </bean>
 
 
