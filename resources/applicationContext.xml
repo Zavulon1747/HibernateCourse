@@ -7,6 +7,8 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <context:property-placeholder location="classpath:myApp.properties"/>
+
     <bean id="myPet"
           class="spring_introduction.MrsAbooba">
 
@@ -16,8 +18,8 @@
           class="spring_introduction.Chat">
     <property name="twitchAnimal" ref="myPet"/>
 
-        <property name="nickname" value="Jokonda_Cruel"/>
-        <property name="age" value="24"/>
+        <property name="nickname" value="${chat.nickname}"/>
+        <property name="age" value="${chat.age}"/>
     </bean>
 
 
