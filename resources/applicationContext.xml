@@ -15,6 +15,9 @@
     <bean id="myChat"
           class="spring_introduction.Chat">
     <property name="twitchAnimal" ref="myPet"/>
+
+        <property name="nickname" value="Jokonda_Cruel"/>
+        <property name="age" value="24"/>
     </bean>
 
 

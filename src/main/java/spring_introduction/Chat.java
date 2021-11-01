@@ -2,6 +2,24 @@ package spring_introduction;
 
 public class Chat {
     private TwitchAnimal twitchAnimal;
+    private String nickname;
+    private int age;
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
 
     public Chat() {
 
@@ -13,7 +31,8 @@ public class Chat {
     }
 
     public void watchYourStreamer() {
-        System.out.println("AYAYA");
+        System.out.print(getNickname() + getAge() + " said: \"");
+        System.out.println("AYAYA\"");
         twitchAnimal.say();
     }
 }
