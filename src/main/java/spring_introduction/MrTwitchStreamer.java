@@ -21,6 +21,7 @@ public class MrTwitchStreamer implements TwitchAnimal {
     }
 
     //For initialize some fields in game/application/web
+    //Method is created for every beans even it is singleton or prototype scopes
     private void init() {
         countOfViewers = 0;
         System.out.println("Стрим запускается. Количество зрителей на начале: "+countOfViewers);
@@ -42,6 +43,8 @@ public class MrTwitchStreamer implements TwitchAnimal {
     }
 
     //Throws some notes/information ...ets.
+    //Runs only for singleton. If bean gets prototype scope you have to
+    // write destroy-method by yourself
     private void destroy() {
         try {
             Thread.sleep(1000);
