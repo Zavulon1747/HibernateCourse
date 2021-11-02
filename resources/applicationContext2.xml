@@ -10,7 +10,9 @@
 
     <bean id="myPet"
           class="spring_introduction.MrTwitchStreamer"
-          scope="prototype">
+          scope="singleton"
+          init-method="init"
+          destroy-method="destroy">
 
 
     </bean>
