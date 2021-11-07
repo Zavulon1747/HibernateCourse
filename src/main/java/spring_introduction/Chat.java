@@ -3,6 +3,7 @@ package spring_introduction;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component("chatBean")
@@ -10,7 +11,9 @@ public class Chat {
 //    @Autowired
 //    @Qualifier("aboobaBean")
     private TwitchAnimal twitchAnimal;
+    @Value("${chat.nickname}")
     private String nickname;
+    @Value("${chat.age}")
     private int age;
 
     public String getNickname() {

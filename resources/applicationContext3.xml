@@ -10,11 +10,11 @@
     <context:component-scan base-package="spring_introduction"/>
     <context:property-placeholder location="classpath:myApp.properties"/>
 
-    <bean id="chatBean"
-          class="spring_introduction.Chat">
-        <property name="nickname" value="${chat.nickname}"/>
-        <property name="age" value="${chat.age}"/>
-    </bean>
+<!--    <bean id="chatBean"-->
+<!--          class="spring_introduction.Chat">-->
+<!--        <property name="nickname" value="${chat.nickname}"/>-->
+<!--        <property name="age" value="${chat.age}"/>-->
+<!--    </bean>-->
 
 
 </beans>
