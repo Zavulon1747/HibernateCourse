@@ -1,7 +1,10 @@
 package spring_introduction;
 
+import org.springframework.stereotype.Component;
+
 import java.util.Random;
 
+@Component
 public class MrTwitchStreamer implements TwitchAnimal {
     private String name;
     public int countOfViewers;
@@ -18,6 +21,10 @@ public class MrTwitchStreamer implements TwitchAnimal {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public MrTwitchStreamer() {
+        System.out.println("XAXAXAXAXAXAXAXAXA");
     }
 
     //For initialize some fields in game/application/web
