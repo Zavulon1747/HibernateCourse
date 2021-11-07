@@ -7,17 +7,11 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <context:component-scan base-package="spring_introduction"/>
     <context:property-placeholder location="classpath:myApp.properties"/>
 
-    <bean id="myPet"
-          class="spring_introduction.MrsAbooba">
-
-    </bean>
-
-    <bean id="myChat"
+    <bean id="chatBean"
           class="spring_introduction.Chat">
-     <!--   <constructor-arg ref="myPet"/>    -constructor -->
-        <property name="twitchAnimal" ref="myPet"/> <!-- setter -->
         <property name="nickname" value="${chat.nickname}"/>
         <property name="age" value="${chat.age}"/>
     </bean>

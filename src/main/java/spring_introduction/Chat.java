@@ -1,6 +1,12 @@
 package spring_introduction;
 
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component("chatBean")
 public class Chat {
+    @Autowired
     private TwitchAnimal twitchAnimal;
     private String nickname;
     private int age;
@@ -22,11 +28,18 @@ public class Chat {
     }
 
     public Chat() {
-
+        System.out.println("AYAYA //default construction Chat()");
     }
 
+//    @Autowired
+//    public Chat(TwitchAnimal twitchAnimal) {
+//        System.out.println("ZDAROVA, RABOTYAGI! YA V LEGO, =)");
+//        this.twitchAnimal = twitchAnimal;
+//    }
+
+//    @Autowired
     public void setTwitchAnimal(TwitchAnimal twitchAnimal) {
-        System.out.println("ЗДАРОВА, РАБОТЯГИ");
+        System.out.println("ЗДАРОВА, РАБОТЯГИ //setter");
         this.twitchAnimal = twitchAnimal;
     }
 
@@ -34,5 +47,6 @@ public class Chat {
         System.out.print(getNickname() + getAge() + " said: \"");
         System.out.println("AYAYA\"");
         twitchAnimal.say();
+
     }
 }
