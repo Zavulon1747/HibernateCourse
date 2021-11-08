@@ -19,6 +19,18 @@ public class ValveGameStore extends AbstractGameStore{
     }
 
     public void getMusic() {
-        System.out.println("We take a CD-disk with music from Steam with time duration");
+        System.out.println("We take a CD-disk with music from Steam");
+    }
+
+    public void returnMusic() {
+        System.out.println("We return a CD-disk with music in Steam");
+    }
+
+    public void addGame() {
+        System.out.println("The game is added");
+    }
+
+    public void addMusic() {
+        System.out.println("The composition is added");
     }
 }

@@ -16,6 +16,8 @@ public class Test1 {
         ValveGameStore libraryValve = contex.getBean("valveGameStore", ValveGameStore.class);
         libraryValve.getGame();
         libraryValve.getMusic();
+//        libraryValve.returnMusic();
+//        libraryValve.returnGame();
 //        libraryValve.getMusic(35, "sec");
 
         contex.close();
