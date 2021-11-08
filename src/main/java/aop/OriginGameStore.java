@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class OriginGameStore extends AbstractGameStore {
-    @Override
+//    @Override
     public void getGame() {
         System.out.println("We take a CD-disk with game from Origin");
     }

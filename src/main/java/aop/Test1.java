@@ -7,13 +7,15 @@ public class Test1 {
 
         AnnotationConfigApplicationContext contex = new AnnotationConfigApplicationContext(MyConfig.class);
 
-        OriginGameStore libraryOrig= contex.getBean("originGameStore", OriginGameStore.class);
-        libraryOrig.getGame();
-        libraryOrig.returnGame();
+//        OriginGameStore libraryOrig= contex.getBean("originGameStore", OriginGameStore.class);
+//        libraryOrig.getGame();
+//        libraryOrig.returnGame();
+
+        Game game = contex.getBean("game", Game.class);
 
         ValveGameStore libraryValve = contex.getBean("valveGameStore", ValveGameStore.class);
-        libraryValve.getGame();
-        libraryValve.getMusic();
+        libraryValve.getGame(game);
+//        libraryValve.getMusic(35, "sec");
 
         contex.close();
     }
