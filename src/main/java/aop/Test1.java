@@ -11,10 +11,11 @@ public class Test1 {
 //        libraryOrig.getGame();
 //        libraryOrig.returnGame();
 
-        Game game = contex.getBean("game", Game.class);
+//        Game game = contex.getBean("game", Game.class);
 
         ValveGameStore libraryValve = contex.getBean("valveGameStore", ValveGameStore.class);
-        libraryValve.getGame(game);
+        libraryValve.getGame();
+        libraryValve.getMusic();
 //        libraryValve.getMusic(35, "sec");
 
         contex.close();
