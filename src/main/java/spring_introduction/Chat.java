@@ -1,14 +1,16 @@
 package spring_introduction;
 
 
+import org.springframework.beans.factory.annotation.Value;
+
 //@Component("chatBean")
 public class Chat {
 //    @Autowired
 //    @Qualifier("aboobaBean")
     private TwitchAnimal twitchAnimal;
-//    @Value("${chat.nickname}")
+    @Value("${chat.nickname}")
     private String nickname;
-//    @Value("${chat.age}")
+    @Value("${chat.age}")
     private int age;
 
     public String getNickname() {
