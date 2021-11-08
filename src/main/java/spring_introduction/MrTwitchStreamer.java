@@ -1,10 +1,9 @@
 package spring_introduction;
 
-import org.springframework.stereotype.Component;
-
 import java.util.Random;
 
-@Component
+//@Component
+//@Scope("prototype")
 public class MrTwitchStreamer implements TwitchAnimal {
     private String name;
     public int countOfViewers;
@@ -24,7 +23,7 @@ public class MrTwitchStreamer implements TwitchAnimal {
     }
 
     public MrTwitchStreamer() {
-        System.out.println("XAXAXAXAXAXAXAXAXA");
+        System.out.println("XAXAXAXAXAXAXAXAXA //Streamer was created");
     }
 
     //For initialize some fields in game/application/web

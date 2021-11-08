@@ -1,19 +1,14 @@
 package spring_introduction;
 
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
-
-@Component("chatBean")
+//@Component("chatBean")
 public class Chat {
 //    @Autowired
 //    @Qualifier("aboobaBean")
     private TwitchAnimal twitchAnimal;
-    @Value("${chat.nickname}")
+//    @Value("${chat.nickname}")
     private String nickname;
-    @Value("${chat.age}")
+//    @Value("${chat.age}")
     private int age;
 
     public String getNickname() {
@@ -36,16 +31,21 @@ public class Chat {
         System.out.println("AYAYA //default construction Chat()");
     }
 
-    @Autowired
-    public Chat(@Qualifier("aboobaBean")TwitchAnimal twitchAnimal) { //Qualifier has the others ElementTypes
-        System.out.println("ZDAROVA, RABOTYAGI! YA V LEGO, =)");
+//    @Autowired
+//    public Chat(@Qualifier("aboobaBean")TwitchAnimal twitchAnimal) { //Qualifier has the others ElementTypes
+//        System.out.println("ZDAROVA, RABOTYAGI! YA V LEGO, =)");
+//        this.twitchAnimal = twitchAnimal;
+//    }
+
+    public Chat(TwitchAnimal twitchAnimal) {
+        System.out.println("ZDAROVA, RABOTYAGI! YA V LEGO, =) //Chat was created");
         this.twitchAnimal = twitchAnimal;
     }
 
 //    @Autowired
     //@Qualifier("aboobaBean")
     public void setTwitchAnimal(TwitchAnimal twitchAnimal) {
-        System.out.println("ЗДАРОВА, РАБОТЯГИ //setter");
+        System.out.println("ЗДАРОВА, РАБОТЯГИ //Chat setter");
         this.twitchAnimal = twitchAnimal;
     }
 
