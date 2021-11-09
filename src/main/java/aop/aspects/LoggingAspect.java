@@ -1,7 +1,10 @@
 package aop.aspects;
 
+import aop.Game;
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
@@ -68,10 +71,29 @@ public class LoggingAspect {
 
 
 
+    @Before("aop.aspects.MyPointcuts.allAddMethods()")
+    public void beforeAddLoggingAdvice(JoinPoint joinPoint) {
 
-    @Before("aop.aspects.MyPointcuts.allGetMethods()")
-    public void beforeGetGLoggingAdvice() {
+        MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();
+        System.out.println("methodSignature = "+methodSignature);
+        System.out.println("methodSignature.getMethod() = "+methodSignature.getMethod());
+        System.out.println("methodSignature.getReturnType() = "+methodSignature.getReturnType());
+        System.out.println("methodSignature.getName() = "+methodSignature.getName());
+
+        if (methodSignature.getName().equals("addGame")) {
+            Object[] arguments = joinPoint.getArgs();
+            for(Object arg: arguments) {
+                if (arg instanceof Game) {
+                    Game myGame = (Game) arg;
+                    System.out.println("Information about game: name - "+myGame.getName()+", genre - "+myGame.getGenre()+", release date - "+myGame.getReleaseDate());
+                } else if (arg instanceof String) {
+                    System.out.println("Игру в библиотеку добавляет - "+ arg);
+                }
+            }
+        }
+
         System.out.println("beforeGetGLoggingAdvice: логгирование попытки получить игру или музыку //Logg--Get");
+        System.out.println("------------------------------------------------------");
     }
 
 
