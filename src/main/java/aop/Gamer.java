@@ -1,6 +1,7 @@
 package aop;
 
 public class Gamer {
+
     private String name;
     private int age;
     private double avgSkillPoint;

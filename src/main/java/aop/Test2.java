@@ -11,8 +11,12 @@ public class Test2 {
         GameSchool gameSchool = context.getBean("gameSchool", GameSchool.class);
 
         gameSchool.addGamers();
-        List<Gamer> gamers = gameSchool.getGamers();
-        System.out.println(gamers);
+        try {
+            List<Gamer> gamers = gameSchool.getGamers();
+            System.out.println(gamers);                         // afterThrowingGetGamersLoggingAdvice: логгируем выброс исключения
+        } catch (Exception e) {
+            System.out.println("Было поймано исключение " + e);  // Было поймано исключение java.lang.IndexOutOfBoundsException: Index 3 out of bounds for length 3
+        }
 
         context.close();
     }

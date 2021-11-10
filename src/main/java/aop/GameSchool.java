@@ -19,6 +19,8 @@ public class GameSchool {
     }
 
     public List<Gamer> getGamers() {
+        System.out.println("Начало работы метода getGamers()");
+        System.out.println(gamers.get(3));
         System.out.println("Information from method getGamers");
         System.out.println(gamers);
         return gamers;
