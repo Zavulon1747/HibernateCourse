@@ -4,7 +4,7 @@ package spring_introduction;
 import org.springframework.beans.factory.annotation.Value;
 
 //@Component("chatBean")
-public class Chat {
+public class Chat { //
 //    @Autowired
 //    @Qualifier("aboobaBean")
     private TwitchAnimal twitchAnimal;
