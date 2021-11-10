@@ -15,9 +15,10 @@ public class ValveGameStore extends AbstractGameStore{
         System.out.println("------------------------------------------------------");
     }
 
-    public void returnGame() {
+    public String returnGame() {
+        int a = 10/0;
         System.out.println("We return game in Valve");
-        System.out.println("------------------------------------------------------");
+        return "Her Story";
     }
 
     public void getMusic() {
