@@ -20,17 +20,16 @@ public class Test1 {
 //            session = factory.getCurrentSession();
 //
 //            Section section1 = new Section("Art");
-//            Child child1 = new Child("Dima", 6);
-//            Child child2 = new Child("Olga", 7);
-//            Child child3 = new Child("Ilias", 5);
+//            Child child1 = new Child("Artem", 6);
+//            Child child2 = new Child("Sasha", 7);
+//            Child child3 = new Child("Lexa", 5);
 //
 //            section1.addChildToSection(child1);
 //            section1.addChildToSection(child2);
 //            section1.addChildToSection(child3);
 //
 //            session.beginTransaction();
-//            session.save(section1);
-//
+//            session.persist(section1);
 //
 //            session.getTransaction().commit();
 //
@@ -68,14 +67,26 @@ public class Test1 {
 //
 //            System.out.println("Done!");
             //******************************************************************************
+//            session = factory.getCurrentSession();
+//
+//            session.beginTransaction();
+//
+//            Child child = session.get(Child.class, 4);
+//
+//            System.out.println(child);
+//            System.out.println(child.getSections());
+//
+//            session.getTransaction().commit();
+//
+//            System.out.println("Done!");
+            //******************************************************************************
             session = factory.getCurrentSession();
 
             session.beginTransaction();
 
             Child child = session.get(Child.class, 4);
 
-            System.out.println(child);
-            System.out.println(child.getSections());
+            session.delete(child);
 
             session.getTransaction().commit();
 
